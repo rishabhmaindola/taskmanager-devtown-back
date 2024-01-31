@@ -11,7 +11,13 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: "https://taskmanager-devtown-front.vercel.app",
+  methods: ["POST", "GET"],
+};
+
+app.use(cors(corsOptions));
 
 const JWT_KEY = process.env.JWT_KEY;
 const PORT = process.env.PORT;
