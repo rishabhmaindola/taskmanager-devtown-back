@@ -14,7 +14,7 @@ app.use(express.json());
 
 const corsOptions = {
   origin: "https://taskmanager-devtown-front.vercel.app",
-  methods: ["POST", "GET"],
+  methods: ["POST", "GET", "PUT", "DELETE"],
   credentials:true
 };
 
